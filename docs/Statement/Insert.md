@@ -7,7 +7,7 @@
 Parameter    | Description
 ------------ | -----------------------------------------
 `$dbh`       | PDO object for database connection
-`$pairs`     | Array of key => value pairs to update
+`$columns`     | Array of columns to update
 
 #### Example
 
@@ -48,11 +48,11 @@ $database->insert()
          ->into('users');
 ```
 
-### `columns(array $columns)`
+### `columns(string $column, ...$columns)`
 
 Parameter    | Description
 ------------ | -----------------------------------------
-`$columns`   | Array containing column names
+`$columns`   | List of parameters containing names
 
 #### Example
 
@@ -68,11 +68,11 @@ $database->insert()
          ->columns(['id', 'username', 'password']);
 ```
 
-### `values(array $values)`
+### `values(string $value, ...$values)`
 
 Parameter    | Description
 ------------ | -----------------------------------------
-`$values`    | Array containing column values
+`$values`    |  List of parameters with values
 
 #### Example
 
